@@ -101,9 +101,9 @@ class TaskReorder(View):
         form = PositionForm(request.POST)
 
         if form.is_valid():
-            positionList = form.cleaned_data["position"].split(',')
+            position_list = form.cleaned_data["position"].split(',')
 
             with transaction.atomic():
-                self.request.user.set_task_order(positionList)
+                self.request.user.set_task_order(position_list)
 
         return redirect(reverse_lazy('tasks'))

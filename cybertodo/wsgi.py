@@ -1,4 +1,3 @@
-  
 """
 WSGI config for todo_list project.
 It exposes the WSGI callable as a module-level variable named ``application``.
